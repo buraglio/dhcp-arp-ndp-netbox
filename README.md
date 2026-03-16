@@ -8,7 +8,7 @@ The script dynamically matches IP addresses to MAC Addresses, Hostnames, and map
 
 ## Usage
 
-This project uses Python. The easiest way to run it is with `uv`, which reads standard inline dependency declarations and runs it directly, aoiding the venv nonsense. 
+This project uses Python. The easiest way to run it is with `uv`, which reads standard inline dependency declarations and runs it directly, avoiding the venv nonsense. 
 
 ```bash
 uv run convert_to_netbox.py
