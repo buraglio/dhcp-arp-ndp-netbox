@@ -1,0 +1,137 @@
+[buraglio@gw.809] > /ip dhcp-server/lease/print
+Flags: X - DISABLED, D - DYNAMIC
+Columns: ADDRESS, MAC-ADDRESS, HOST-NAME, SERVER, STATUS, LAST-SEEN
+ #   ADDRESS        MAC-ADDRESS        HOST-NAME                            SERVER     STATUS   LAST-SEEN
+;;; cam11
+ 0   10.209.6.26    48:02:2A:07:10:86                                       vlan6-lan  waiting  365w3d4h41m58s
+;;; cam10
+ 1   10.209.6.25    84:20:96:90:50:35  IPC                                  vlan6-lan  bound    2h5m2s
+;;; cam9
+ 2   10.209.6.24    84:20:96:90:F5:B4  IPC                                  vlan6-lan  waiting  261w5d9h28m49s
+;;; cam7
+ 3   10.209.6.22    F6:80:00:03:23:F0                                       vlan6-lan  waiting  147w2d19h49m49s
+;;; cam6
+ 4   10.209.6.6     00:12:17:31:F2:FC  LocalHost                            vlan6-lan  bound    11h1m31s
+;;; cam5
+ 5   10.209.6.5     EC:71:DB:CD:12:6C  cam5                                 vlan6-lan  bound    9h51m8s
+ 6 X 10.209.209.61  10:DD:B1:F2:B3:5A                                       vlan0-lan  waiting  never
+;;; netcontrol
+ 7 X 10.209.209.11  DE:AD:BE:EF:CA:FE                                       vlan0-lan  waiting  never
+;;; sw2
+ 8 X 10.209.209.6   88:DC:96:52:D0:1C                                       vlan0-lan  waiting  184w1d22h56m49s
+;;; wap1
+ 9   10.209.209.5   78:8A:20:83:39:8F  wap1                                 vlan0-lan  waiting  365w3d3h57m28s
+;;; wap2
+10   10.209.209.4   B4:FB:E4:C6:B5:82                                       vlan0-lan  waiting  169w1d23h27m4s
+;;; wap3
+11   10.209.209.7   B4:FB:E4:46:76:DC  wap-iw-b                             vlan0-lan  waiting  169w1d23h26m45s
+;;; resolver-pi
+12   10.209.9.2     B8:27:EB:1E:F9:6F  rdns1                                vlan9-lan  bound    2h15m31s
+;;; nas
+13   10.209.9.15    00:11:32:63:97:E1                                       vlan9-lan  waiting  never
+14   10.209.9.28    00:C0:B7:2D:69:71                                       vlan9-lan  waiting  74w6d23h49m42s
+;;; netmon
+15   10.209.9.7     5A:14:03:65:32:82                                       vlan9-lan  waiting  never
+;;; recorder
+16   10.209.6.4     56:E2:A4:D1:51:ED                                       vlan6-lan  waiting  never
+;;; ups2
+17   10.209.209.29  00:C0:B7:EA:3E:17  ups2                                 vlan0-lan  waiting  75w1d8h14m35s
+;;; sw3
+18   10.209.209.3   88:DC:96:75:F4:01                                       vlan0-lan  waiting  150w1d12h42s
+;;; sw1
+19 X 10.209.209.2   B4:FB:E4:19:E1:BF  sw1                                  vlan0-lan  waiting  257w1d13h18m40s
+;;; cam3
+20   10.209.6.21    EC:71:DB:36:37:9D  cam3                                 vlan6-lan  bound    1h51m6s
+21   10.209.6.13    00:12:17:31:E2:EC  LocalHost                            vlan6-lan  waiting  149w5h56m37s
+;;; NAS Usernet Interface
+22   10.209.4.15    00:11:32:FC:51:97  SynologyNAS                          vlan4-lan  waiting  20w6d19h55m52s
+;;; cam8
+23   10.209.6.23    84:20:96:90:78:B1  IPC                                  vlan6-lan  waiting  148w2d6h19m25s
+;;; cam4
+24   10.209.6.20    EC:71:DB:67:C5:23  cam4                                 vlan6-lan  bound    1h51m18s
+25   10.209.6.28    80:91:33:6C:6B:39  Roomba-69F4051C82526520              vlan6-lan  waiting  142w7h10m45s
+;;; PSC
+26   10.209.4.11    B0:E8:92:0F:24:84  PSC                                  vlan4-lan  waiting  108w21h51m13s
+;;; rdns3
+27   10.209.4.2     DC:A6:32:15:F4:98  MacBook-Pro                          vlan4-lan  waiting  116w6d7h20m2s
+;;; laser printer wired ethernet
+28   10.209.4.10    F8:0D:AC:74:BD:44  laser                                vlan4-lan  bound    2h18m59s
+;;; Rebecca's iPhone
+29 X 10.209.4.12    84:AD:8D:AC:83:AE  iPhone-2                             vlan4-lan  waiting  179w6d21m31s
+;;; cube
+30   10.209.6.2     D0:63:B4:00:27:94  rdns4                                vlan6-lan  bound    3h35m24s
+;;; wap-iw-1
+31   10.209.209.15  1C:61:B4:D0:86:06  wap-iw-1                             vlan0-lan  bound    9h34m35s
+;;; dns64
+32   10.209.9.4     CA:B9:95:56:1A:3F  dns64                                vlan9-lan  waiting  149w18h38s
+;;; Dome Camera
+33   10.209.6.8     F6:3A:80:09:45:0D                                       vlan6-lan  waiting  149w1d22h58m26s
+;;; office-probe raspberry pi
+34   10.209.4.5     B8:27:EB:8D:7B:E3  office-probe                         vlan4-lan  waiting  74w1d18h21m37s
+35 D 10.209.6.16    EC:71:DB:85:B2:D2  cam2                                 vlan6-lan  bound    10h4m7s
+;;; ups3
+36   10.209.209.27  00:C0:B7:B9:B5:CB  ups3                                 vlan0-lan  waiting  19w4d1h12m12s
+;;; thunderBolt 4 Dock
+37   10.209.4.6     00:23:A4:06:52:6B  sliver                               vlan4-lan  waiting  46w22h14m3s
+;;; Solar Controller
+38   10.209.6.14    B8:2D:28:2C:23:26  pvs6-ZT230985000549F0693             vlan6-lan  bound    9h25m39s
+;;; winbox-basement
+39   10.209.4.121   E8:FF:1E:D0:7B:E1  winbox-home-basement                 vlan4-lan  waiting  28w2d19h35m54s
+;;; heelflip-wireless
+40   10.209.4.3     F8:4D:89:70:AF:C7  MacBookPro                           vlan4-lan  waiting  48w9h4m
+41 D 10.209.6.40    DC:03:98:CF:85:D3  LG_Smart_Dryer2_open                 vlan6-lan  bound    2h28m29s
+42 D 10.209.209.13  88:DE:A9:35:34:C0  RokuPremiere                         vlan0-lan  bound    3h34m19s
+;;; Dell Display Dock
+43   10.209.4.4     D0:C1:B5:23:6C:95  sliver                               vlan4-lan  waiting  1w23h1m40s
+44 D 10.209.6.34    34:E1:D1:81:01:E0                                       vlan6-lan  bound    7h18m38s
+;;; sole rpi
+45 X 10.209.6.3     B8:27:EB:29:43:F8  probe12                              vlan6-lan  waiting  17w22h15m46s
+;;; homeassistant VM
+46   10.209.6.7     BC:24:11:5A:15:D4  ha                                   vlan6-lan  bound    2h55m30s
+47 D 10.209.6.9     FC:B9:7E:0B:71:53  GEMODULE7153                         vlan6-lan  bound    2h33m34s
+48 D 10.209.6.19    60:8A:10:78:FB:23  GLENTRONxWF                          vlan6-lan  bound    4h15m19s
+49 D 10.209.6.11    70:89:76:36:C2:24  wlan0                                vlan6-lan  bound    3h50m10s
+50 D 10.209.6.15    24:E8:53:C8:9E:C7  LG_Smart_Laundry2_open               vlan6-lan  bound    5m32s
+51 D 10.209.4.7     64:66:B3:D1:2D:02                                       vlan4-lan  bound    2h22m59s
+52 D 10.209.4.8     02:00:00:0B:09:01  EMUELEC                              vlan4-lan  bound    1h39m14s
+53 D 10.209.4.9     58:D3:49:E7:95:69  Basement                             vlan4-lan  bound    34m11s
+54 D 10.209.4.36    F8:0F:F9:9B:96:65  Google-Nest-Mini                     vlan4-lan  bound    15m19s
+55 D 10.209.4.34    CC:F4:11:B2:4B:48  Google-Nest-Mini                     vlan4-lan  bound    11h29m48s
+56 D 10.209.4.19    20:DF:B9:8B:CC:2B  Google-Home-Mini                     vlan4-lan  bound    5h39m54s
+57 D 10.209.4.24    9C:3E:53:1C:91:21  Living-Room                          vlan4-lan  bound    1h57m50s
+58 D 10.209.4.20    44:BB:3B:40:8A:F1  09AF01AJ01230261                     vlan4-lan  bound    8h21m13s
+59 D 10.209.9.5     BC:24:11:34:4D:22  ts-809-gw                            vlan9-lan  bound    2h46m33s
+60 D 10.209.6.33    24:CD:8D:6F:63:4B  Sense-N320006961                     vlan6-lan  bound    1h6m35s
+61 D 10.209.4.33    CC:F4:11:B1:81:B8  Google-Nest-Mini                     vlan4-lan  bound    11h50m12s
+62 D 10.209.209.9   50:E4:E0:C3:EB:D4  WAP-AX-LIVINGROOM                    vlan0-lan  bound    11h35m23s
+63 D 10.209.4.38    92:1F:A5:F6:1C:BC  Mac                                  vlan4-lan  bound    10m8s
+64 D 10.209.209.12  50:E4:E0:C3:F3:20  WAP-AX-GARAGE                        vlan0-lan  bound    11h36m19s
+;;; Doorbell Camera
+65   10.209.6.27    18:2C:65:D2:3C:87  Reolink                              vlan6-lan  waiting  6w1d21h3m13s
+66 D 10.209.4.13    20:DF:B9:2F:A9:78  Google-Home-Mini                     vlan4-lan  bound    1h8m22s
+67 D 10.209.4.16    54:49:DF:14:E5:5D                                       vlan4-lan  bound    6h3m57s
+68 D 10.209.4.23    C6:FF:0E:6A:BA:69  iPhone                               vlan4-lan  bound    1h6m16s
+69 D 10.209.4.17    A4:CF:99:04:30:57  RB-iPhone14                          vlan4-lan  bound    3h18m37s
+;;; Doorbell Camera
+70   10.209.6.41    BC:09:B9:CD:F4:3C  Front                                vlan6-lan  bound    1h51m18s
+71 D 10.209.4.43    CC:F4:11:C0:9D:B5  Google-Nest-Mini                     vlan4-lan  bound    1h28m42s
+72 D 10.209.6.39    C8:2B:96:8E:33:FC  ColoLight-C82B968E33FC               vlan6-lan  bound    56m28s
+73 D 10.209.209.11  6C:1F:F7:A5:90:A7  vault                                vlan0-lan  bound    53s
+74 D 10.209.6.37    AC:04:0B:D9:57:EA                                       vlan6-lan  bound    5h23m20s
+75 D 10.209.6.18    94:27:70:30:AC:E9  bosch-dishwasher-105030531612003842  vlan6-lan  bound    6h17m1s
+76 D 10.209.4.44    74:DF:BF:05:0B:70  TCL-RokuTV-650                       vlan4-lan  bound    14m1s
+77 D 10.209.4.68    14:14:7D:29:73:A8  Bedroom                              vlan4-lan  bound    8h47m18s
+78 D 10.209.4.47    44:C6:5D:87:C7:83  Bedroom-2                            vlan4-lan  bound    2h20m23s
+79 D 10.209.4.21    18:C0:4D:8D:F5:AB  LPB-Win11                            vlan4-lan  bound    3h44m58s
+80 D 10.209.4.22    7A:93:52:35:4E:10  iPhone                               vlan4-lan  bound    3h24m2s
+81 D 10.209.4.64    F0:1F:C7:9D:24:16  NDB-iPhone14                         vlan4-lan  bound    47m51s
+82 D 10.209.4.12    7E:C7:93:15:82:6D  Mac                                  vlan4-lan  bound    27m30s
+83 D 10.209.4.27    74:8F:3C:33:2C:BD  Zachs-iPad-Pro                       vlan4-lan  bound    1h41m32s
+84 D 10.209.9.6     BC:24:11:AA:72:1F  mossa                                vlan9-lan  bound    11h31m52s
+85 D 10.209.9.8     BC:24:11:39:65:CB  dockhost                             vlan9-lan  bound    11h31m47s
+86 D 10.209.4.52    DE:BA:51:BD:8B:6F  Watch                                vlan4-lan  bound    22h50m13s
+87 D 10.209.4.41    00:7C:2D:92:E7:5B  Samsung                              vlan4-lan  bound    2h12m40s
+88 D 10.209.4.29    0C:62:A6:F1:E4:0F  TCL-RokuTV-162                       vlan4-lan  bound    19h30m43s
+89 D 10.209.9.16    BC:24:11:81:85:0E  pve-scripts-local                    vlan9-lan  bound    7h39m10s
+90 D 10.209.9.17    BC:24:11:4A:26:1B  dns-master                           vlan9-lan  bound    6h6m9s
+91 D 10.209.4.39    68:7A:64:C0:B4:B7  winbox-home-basement                 vlan4-lan  bound    2h19m30s
