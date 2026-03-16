@@ -1,0 +1,7 @@
+address,status,dns_name,description,vlan_id,mac_address
+192.168.10.10/32,active,alpha-pc,"MAC: 00:1A:2B:3C:4D:5E | Intf: vlan.10 | Host: alpha-pc | Src: lease,arp",10,00:1A:2B:3C:4D:5E
+192.168.10.25/32,active,Printer,"MAC: 11:22:33:44:55:66 | Intf: vlan.10 | Host: Printer | Src: lease,arp",10,11:22:33:44:55:66
+192.168.20.50/32,active,,MAC: AA:BB:CC:DD:EE:FF | Intf: ether1 | Src: arp,,AA:BB:CC:DD:EE:FF
+2001:db8:1234:10::10/128,active,,MAC: 00:1A:2B:3C:4D:5E | Intf: vlan.10 | Src: ndp,10,00:1A:2B:3C:4D:5E
+2001:db8:1234:20::abcd/128,active,,MAC: AA:BB:CC:DD:EE:FF | Intf: ether1 | Src: ndp,,AA:BB:CC:DD:EE:FF
+fe80::21a:2bff:fe3c:4d5e/128,active,,MAC: 00:1A:2B:3C:4D:5E | Intf: vlan.10 | Src: ndp,10,00:1A:2B:3C:4D:5E

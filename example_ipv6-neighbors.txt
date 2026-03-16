@@ -1,0 +1,5 @@
+Flags: X - disabled, D - dynamic; R - router
+ #    ADDRESS                                 MAC-ADDRESS       INTERFACE                                          VRF
+ 0 D  2001:db8:1234:10::10                    00:1A:2B:3C:4D:5E vlan.10                                            main
+ 1 D  fe80::21a:2bff:fe3c:4d5e                00:1A:2B:3C:4D:5E vlan.10                                            main
+ 2 D  2001:db8:1234:20::abcd                  AA:BB:CC:DD:EE:FF ether1                                             main

@@ -1,0 +1,8 @@
+[buraglio@gw] > /ip dhcp-server/lease/print
+Flags: X - DISABLED, D - DYNAMIC
+Columns: ADDRESS, MAC-ADDRESS, HOST-NAME, SERVER, STATUS, LAST-SEEN
+ #   ADDRESS        MAC-ADDRESS        HOST-NAME                            SERVER     STATUS   LAST-SEEN
+;;; Workstation Alpha
+ 0   192.168.10.10  00:1A:2B:3C:4D:5E  alpha-pc                             vlan10-lan bound    2h5m2s
+;;; Printer
+ 1   192.168.10.25  11:22:33:44:55:66                                       vlan10-lan bound    14d

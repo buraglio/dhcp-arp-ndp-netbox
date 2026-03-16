@@ -1,0 +1,5 @@
+Flags: X - disabled, I - invalid, H - dhcp, D - dynamic, P - published; C - complete
+ #    ADDRESS         MAC-ADDRESS       INTERFACE                                  VRF                                  STATUS
+ 0 HC 192.168.10.10   00:1A:2B:3C:4D:5E vlan.10                                    main                                 permanent
+ 1 DC 192.168.20.50   AA:BB:CC:DD:EE:FF ether1                                     main                                 reachable
+ 2 HC 192.168.10.25   11:22:33:44:55:66 vlan.10                                    main                                 permanent
