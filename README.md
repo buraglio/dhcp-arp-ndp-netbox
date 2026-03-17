@@ -25,6 +25,7 @@ The script provides the following argument flags to let you limit execution appr
 *   `--ipv4` : **Only export IPv4 addresses.**
 *   `--ipv6` : **Only export IPv6 addresses.**
 *   `--no-slaac` : **Exclude SLAAC (EUI-64 derived) IPv6 addresses.**
+*   `--no-link-local` : **Exclude Link-Local (`fe80::/10`) IPv6 addresses.**
 
 #### Examples:
 
@@ -46,4 +47,9 @@ uv run convert_to_netbox.py --ipv6
 Export **only IPv6**, but exclude any SLAAC generated interfaces (EUI-64):
 ```bash
 uv run convert_to_netbox.py --ipv6 --no-slaac
+```
+
+Export **only IPv6**, exclude SLAAC, and exclude anything mapped to `fe80::/10`:
+```bash
+uv run convert_to_netbox.py --ipv6 --no-slaac --no-link-local
 ```

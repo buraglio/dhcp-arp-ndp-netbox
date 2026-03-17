@@ -112,25 +112,30 @@ def extract_vlan_id(interface):
             return None
     return None
 
-def is_slaac_eui64(ip_obj, mac_str):
-    if not mac_str:
-        return False
+def is_slaac(ip_obj):
     packed = ip_obj.packed
-    # Quick check for FF:FE in the middle of the IID
-    if packed[11] == 0xff and packed[12] == 0xfe:
-        mac_parts = mac_str.split(':')
-        if len(mac_parts) == 6:
-            try:
-                b0 = int(mac_parts[0], 16) ^ 0x02
-                expected_iid = [
-                    b0, int(mac_parts[1], 16), int(mac_parts[2], 16),
-                    0xff, 0xfe,
-                    int(mac_parts[3], 16), int(mac_parts[4], 16), int(mac_parts[5], 16)
-                ]
-                if list(packed[8:]) == expected_iid:
-                    return True
-            except ValueError:
-                pass
+    iid_bytes = packed[8:]
+    
+    # Check for EUI-64 signature (FF:FE in the middle of the IID)
+    if iid_bytes[3] == 0xff and iid_bytes[4] == 0xfe:
+        return True
+        
+    # Check for RFC 4941 Privacy Extensions
+    # Privacy extensions generate 64 random bits. Manually assigned or 
+    # stateful DHCPv6 IPs typically use low-numbered IIDs (e.g., ::10) which compress well.
+    # We can calculate "entropy" by counting how many 16-bit hextets are non-zero.
+    # An IID with 3 or 4 populated hextets is almost certainly a random SLAAC generation.
+    hextets = [
+        (iid_bytes[0] << 8) | iid_bytes[1],
+        (iid_bytes[2] << 8) | iid_bytes[3],
+        (iid_bytes[4] << 8) | iid_bytes[5],
+        (iid_bytes[6] << 8) | iid_bytes[7],
+    ]
+    
+    non_zero_hextets = sum(1 for h in hextets if h != 0)
+    if non_zero_hextets >= 3:
+        return True
+        
     return False
 
 def main():
@@ -142,6 +147,7 @@ def main():
     parser.add_argument('--ipv4', action='store_true', help='Only include IPv4 addresses.')
     parser.add_argument('--ipv6', action='store_true', help='Only include IPv6 addresses.')
     parser.add_argument('--no-slaac', action='store_true', help='Exclude IPv6 SLAAC (EUI-64 derived) addresses.')
+    parser.add_argument('--no-link-local', action='store_true', help='Exclude IPv6 Link-Local (fe80::/10) addresses.')
     args = parser.parse_args()
 
     # Data collection
@@ -169,6 +175,9 @@ def main():
         if args.ipv4 and ip_obj.version != 4:
             continue
         if args.ipv6 and ip_obj.version != 6:
+            continue
+            
+        if args.no_link_local and ip_obj.is_link_local:
             continue
             
         entry = {
@@ -207,8 +216,8 @@ def main():
             interface = ndp[ip_str]['interface']
             sources.append('ndp')
             
-        if args.no_slaac and ip_obj.version == 6 and mac:
-            if is_slaac_eui64(ip_obj, mac):
+        if args.no_slaac and ip_obj.version == 6:
+            if is_slaac(ip_obj):
                 continue
             
         entry['mac_address'] = mac
