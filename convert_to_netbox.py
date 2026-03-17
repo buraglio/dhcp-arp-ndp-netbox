@@ -175,8 +175,7 @@ def main():
             'address': '',
             'status': 'active',
             'dns_name': '',
-            'description': '',
-            'tags': ''
+            'description': ''
         }
         
         # Determine CIDR format for import
@@ -217,8 +216,6 @@ def main():
             entry['dns_name'] = hostname
             
         vlan_id = extract_vlan_id(interface)
-        if vlan_id is not None:
-            entry['tags'] = f"vlan-{vlan_id}"
             
         desc_parts = []
         if mac:
@@ -241,7 +238,7 @@ def main():
     results.sort(key=sort_key)
     
     # Write to CSV
-    headers = ['address', 'status', 'dns_name', 'description', 'tags']
+    headers = ['address', 'status', 'dns_name', 'description']
     
     with open(args.output, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=headers, extrasaction='ignore')
