@@ -213,7 +213,10 @@ def main():
             
         entry['mac_address'] = mac
         if hostname:
-            entry['dns_name'] = hostname
+            # Sanitize the hostname for NetBox dns_name validation
+            # Allows: alphanumeric, asterisks, hyphens, periods, and underscores
+            sanitized = re.sub(r'[^a-zA-Z0-9\*\-\._]', '', hostname.replace(' ', '-'))
+            entry['dns_name'] = sanitized
             
         vlan_id = extract_vlan_id(interface)
             
